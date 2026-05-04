@@ -1,0 +1,137 @@
+/* Global Body */
+body {
+    background: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Calculator body */
+.calculator {
+    background: linear-gradient(#f5f5f5, #dcdcdc);
+    padding: 16px;
+    border-radius: 12px;
+    width: 340px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    border: 2px solid #aaa;
+}
+
+/* Brand */
+.brand {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.brand .casio {
+    color: #222;
+}
+
+.brand .model {
+    color: #444;
+    font-size: 12px;
+}
+
+/* LCD display */
+.display.lcd {
+    background: #c9e2c9;
+    color: #102010;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 18px;
+    padding: 12px;
+    text-align: right;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    height: 48px;
+    overflow-x: auto;
+    border: 2px inset #8fa98f;
+    letter-spacing: 1px;
+}
+
+/* Buttons grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 7px;
+}
+
+/* Button base style */
+button {
+    padding: 12px 6px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: 1px solid #666;
+    background: #f0f0f0;
+    cursor: pointer;
+    box-shadow: inset 0 -2px 0 #bbb;
+    color: #333;
+}
+
+/* Number buttons */
+button:not(.clear):not(.equal) {
+    background: #ffffff;
+    color: #333;
+}
+
+/* Operators */
+button.operator {
+    background: #ffe08a;
+    color: #333;
+}
+
+/* AC button */
+button.clear {
+    background: #d9534f;
+    color: white;
+}
+
+/* Equals button */
+button.equal {
+    background: #5cb85c;
+    grid-column: span 2;
+    color: white;
+}
+
+/* Button press effect */
+button:active {
+    box-shadow: inset 0 2px 0 #888;
+    transform: translateY(1px);
+}
+
+/* Hover effects */
+button:hover {
+    background-color: #f1f1f1;
+}
+
+button.operator:hover {
+    background-color: #ffdb58;
+}
+
+/* ========================= */
+/* FRACTION DISPLAY (tight, horizontal line) */
+/* ========================= */
+.fraction {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75em;
+    line-height: 0.9;
+}
+
+.fraction .top,
+.fraction .bottom {
+    padding: 0;
+    margin: 0;
+}
+
+.fraction .bar {
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    margin: 1px 0;
+}
